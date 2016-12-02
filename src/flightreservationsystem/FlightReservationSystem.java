@@ -5,6 +5,8 @@
  */
 package flightreservationsystem;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Nim
@@ -16,7 +18,9 @@ public class FlightReservationSystem {
      */
     public static void main(String[] args) {
         System.out.println("sss");
-        System.out.println()
+        System.out.println();
+        Scanner sc =new Scanner(System.in);
+        
                 
         
         
