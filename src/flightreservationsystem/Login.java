@@ -131,6 +131,11 @@ public class Login extends javax.swing.JFrame {
         jTextField2.setBounds(580, 340, 200, 29);
 
         loginbtn.setText("Login");
+        loginbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginbtnActionPerformed(evt);
+            }
+        });
         getContentPane().add(loginbtn);
         loginbtn.setBounds(580, 400, 80, 32);
 
@@ -149,9 +154,14 @@ public class Login extends javax.swing.JFrame {
 
         registerlbl.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         registerlbl.setForeground(new java.awt.Color(0, 0, 0));
-        registerlbl.setText("Register");
+        registerlbl.setText("Click here to Register Passenger");
+        registerlbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registerlblMouseClicked(evt);
+            }
+        });
         getContentPane().add(registerlbl);
-        registerlbl.setBounds(470, 450, 90, 20);
+        registerlbl.setBounds(470, 480, 270, 20);
 
         closebtn.setIcon(new javax.swing.ImageIcon("D:\\JAPURA\\CS\\CS\\FistYear\\FinalAssignment\\FlightReservationSystem\\src\\flightreservationsystem\\close-icon-16 (Custom).png")); // NOI18N
         closebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +187,18 @@ public class Login extends javax.swing.JFrame {
     private void minimizebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizebtnActionPerformed
         this.setState(Login.ICONIFIED);
     }//GEN-LAST:event_minimizebtnActionPerformed
+
+    private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
+        Welcome welcomeobj1 = new Welcome();
+        welcomeobj1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_loginbtnActionPerformed
+
+    private void registerlblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerlblMouseClicked
+        RegisterPassenger registerpassenger_obj1= new RegisterPassenger();
+        registerpassenger_obj1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_registerlblMouseClicked
 
     /**
      * @param args the command line arguments
